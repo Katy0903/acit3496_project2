@@ -24,7 +24,8 @@ services:
 
   # MySQL Container
   mysql:
-    image: mysql:5.7
+    # image: mysql:5.7
+    build: ./mysql
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: video_db
@@ -43,8 +44,7 @@ services:
 
   # File Storage Container
   storage:
-    image: alpine
-    command: tail -f /dev/null  
+    build: ./storage
     volumes:
       - video_storage:/storage
     networks:
@@ -60,6 +60,3 @@ volumes:
   # web-app:
   video_mysql: 
   video_storage:
-
-
-
