@@ -1,0 +1,5 @@
+# Use Alpine Linux as the base image
+FROM alpine:latest
+
+
+CMD ["tail", "-f", "/dev/null"]
