@@ -5,6 +5,8 @@ FROM mysql:5.7
 ENV MYSQL_ROOT_PASSWORD=rootpassword
 ENV MYSQL_DATABASE=video_db
 
+COPY init.sql /docker-entrypoint-initdb.d/
+
 
 # Expose MySQL port
 EXPOSE 3306
