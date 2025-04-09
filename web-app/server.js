@@ -204,6 +204,10 @@ app.get('/video/:username/:filename', (req, res) => {
 
 
 // Start the app
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+// app.listen(port, () => {
+//   console.log(`Server is running at http://localhost:${port}`);
+// });
+
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server is running on port ${port}`);
 });

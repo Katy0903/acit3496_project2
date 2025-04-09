@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: web-app
-        image: paulohernandez/web-app:latest
+        image: katychan/web-app:latest
         ports:
         - containerPort: 8080
         env:
@@ -83,7 +83,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: mysql:5.7
+        image: katychan/mysql:latest
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: rootpassword
@@ -126,7 +126,7 @@ spec:
     spec:
       containers:
       - name: storage
-        image: paulohernandez/storage:latest
+        image: katychan/storage1:latest
         volumeMounts:
         - name: storage
           mountPath: /storage
